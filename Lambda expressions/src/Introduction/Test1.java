@@ -70,7 +70,7 @@ public class Test1 {
 
 		BiFunction<Integer, Integer, Integer> sum = (a, b) -> a + b;
 
-		System.out.println(sum.apply(10, 10));
+		System.out.println(sum.apply(10, 10)); 
 
 		Function<String, Integer> leng = String::length;
 
