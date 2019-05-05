@@ -1,5 +1,8 @@
 package Introduction;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
@@ -79,6 +82,28 @@ public class Test1 {
 		Consumer<Shape> rect = Shape::draw;
 
 		rect.accept(() -> System.out.println("Areal"));
+		
+		Predicate<Integer> pi=i->i<10;
+		
+		Predicate<Integer> p2=i-> i%2==0;
+		
+		m2(pi.and(p2));// combination of two predicates.
+		
+		m2(pi.or(p2));
+		
+		m2(p2.negate()); // give the negation
+		
+		List<Integer> lis=new ArrayList();
+		
+		Predicate<Collection> ps=h->h.isEmpty(); // to check collection
+		
+		System.out.println(ps.test(lis));
 
+	}
+
+	private static void m2(Predicate<Integer> pi) {
+		// TODO Auto-generated method stub
+		
+		System.out.println(pi.test(9));
 	}
 }
