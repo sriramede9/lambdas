@@ -36,6 +36,12 @@ public class ExploreFunction {
 		// example 2 to demonstrate f1compose(f2)
 
 		fcompose("SriRamEde SRi", f1.compose(f2));
+		
+		// similarly f1 2* the given number of a number
+		// f2 cube of a number
+		
+		// f1.andthen f2= 2*number and then cube of it 4 cube 64
+		//fi.compose fg= cube and then 2*number of it 8*2 16 
 	}
 
 	private static void funcitontotest1(String string, Function<String, Integer> function2) {
